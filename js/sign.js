@@ -1,13 +1,24 @@
+var check = document.getElementById("check");
 var check1 = document.getElementById("check1");
 var check2 = document.getElementById("check2");
 var check3 = document.getElementById("check3");
 
+var nameInput=document.getElementById("name_input");
 var emailInput = document.getElementById("email_input");
 var passwordInput = document.getElementById("password_input");
 var passwordInput2 = document.getElementById("password_input2");
 function validateForm() {
-var x,y,y1;
-    
+var m,x,y,y1;
+
+    if(nameInput.value.trim()==""){
+
+        check.innerHTML="Please Enter your name.";
+        check.style.color = "red";
+        m="false";
+    } else {
+        check.innerHTML="";
+m="true";
+    }
      if (!validateEmail(emailInput.value)) {
         check1.innerHTML="Please Enter Valid Email.";
         check1.style.color = "red";
@@ -35,9 +46,10 @@ x="true";
         }
     }
 
-    if(x=="true"&&y=="true"&& y1=="true")
+    if(m=="true"&&x=="true"&&y=="true"&& y1=="true")
     {
         alert("well done! Your account has been created successfully" ); 
+        nameInput.value="";
         emailInput.value="";
         passwordInput.value="";
         passwordInput2.value="";
