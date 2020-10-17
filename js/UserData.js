@@ -12,6 +12,7 @@ export default class UserData {
         this.setName(name);
         this.#setEmail(email);
         this.#setPassword(password);
+        this.#image = "images/user/default.png";
     }
 
     getName() {
