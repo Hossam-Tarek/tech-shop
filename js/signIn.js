@@ -1,5 +1,3 @@
-//-----------------------------------------------------------------------
-
 let check4 = document.getElementById("check4");
 let check5 = document.getElementById("check5");
 
@@ -41,4 +39,4 @@ function validateEmail(email)
 document.getElementById("loginbtn").addEventListener("click", function() {
     validateForm2();
   });
-  //---------------------------------------------------------------------------------
+ 

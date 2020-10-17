@@ -58,6 +58,3 @@ function validateEmail(email)
 document.getElementById("signup-btn").addEventListener("click", function() {
     validateForm();
   });
-
-// -----------------------------------------------------------------------------------------------------------
-
