@@ -6,14 +6,10 @@
 <title> Log In</title>
 </head>
 <body>
-  <!-- <style>
-    body{
-      background-color:aqua;
-    }
-  </style> -->
+ 
 <h1>Log In </h1>
 
-<form action="/action_page.php" method="post">
+<form >
   <div class="imgcontainer">
     <img src="logo.png" >
   </div>
@@ -27,19 +23,19 @@
     <input id="password_enter" type="password" placeholder="Enter Password" name="psw" required>
     <p id="check5"></p>
 
-    <button type="button" onclick="loginButton()">Login</button>
+    <button type="button" id="loginbtn" >Login</button>
     <label>
       <input type="checkbox" checked="checked" name="remember"> Remember me
     </label>
   </div>
 
   <div class="container" >
-    <button onclick="location.href='index.html'" type="button" class="cancelbtn">Cancel</button>
-    <span class="psw">Forgot <a href="#" style="color:#00dcdc">password?</a></span>
+    <button  type="button" class="cancelbtn"><a href="index.html"> Cancel </a></button>
+    <span class="psw">Forgot <a href="#" >password?</a></span>
   </div>
 </form>
 
-<script src="js/sign.js"></script>
+<script src="js/signIn.js"></script>
 
 </body>
 </html>
