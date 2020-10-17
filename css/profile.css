@@ -1,0 +1,5 @@
+@import "./color-scheme.css";
+
+body {
+    background-color: var(--bg-color);
+}
