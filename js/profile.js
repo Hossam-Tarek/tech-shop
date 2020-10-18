@@ -24,7 +24,7 @@ let userData = sessionStorage.getItem("UserData");
         return;
     }
     userData = UserData.setObject(JSON.parse(data));
-    console.log(userData);
+    showData();
 })(userData);
 
 editButton.addEventListener("click", editUserData);
