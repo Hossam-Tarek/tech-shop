@@ -40,7 +40,7 @@ class Message {
         this.date = getCurrentFormatedDate();
     }
 }
-///////////////////////////////////// START Handling admin classes /////////////////////////////////////
+///////////////////////////////////// End Handling admin classes /////////////////////////////////////
 
 let adminAccount;
 
@@ -1016,24 +1016,4 @@ function responseMessage(message, status, formObject, redirectStatus = false, re
 
     formObject.appendChild(message_div);
 }
-
-function dummyEmailData() {
-    let oldMessages = localStorage.getItem('messages');
-    oldMessages = JSON.parse(oldMessages);
-
-    let currentId = localStorage.getItem('messageID');
-    currentId = JSON.parse(currentId);
-
-    let newMessage = new Message(currentId++, `ahmed${currentId}`, `this mail for ${currentId}`);
-
-    localStorage.setItem('messageID', currentId);
-
-    oldMessages.push(newMessage);
-
-    oldMessages = JSON.stringify(oldMessages);
-    localStorage.setItem('messages', oldMessages);
-}
-
-// dummyEmailData();
 ///////////////////////////////////// END Handling admin Global Functions /////////////////////////////////////
-
