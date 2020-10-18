@@ -251,13 +251,6 @@ function findCategory(categoryName, oldCategories, id = 0) {
         }
     }
     return false;
-
-    // oldCategories.forEach(element => {
-    //     if(element.name === categoryName){
-    //         return true;
-    //     }
-    // });
-    // return false;
 }
 
 
