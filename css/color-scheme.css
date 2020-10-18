@@ -16,6 +16,15 @@
   --danger-bg-color: #dc3545;
   --hover-danger-bg-color: #c82333;
 
+  /* alerts*/
+  --alert-danger : #f8d7da;
+  --alert-danger-text: #721c24;
+  --alert-danger-border: #f5c6cb;
+
+  --alert-success : #d4edda;
+  --alert-success-text: #155724;
+  --alert-success-border: #c3e6cb;
+
   /* Button colors */
   --primary-button-color: #015e5f;
   --hover-primary-button-color: #054346;

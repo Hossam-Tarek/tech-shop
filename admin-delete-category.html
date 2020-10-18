@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Tech Shop: Delete Category</title>
+
+  <link rel="stylesheet" href="css/fontaswesme-all.min.css">
+  <link rel="stylesheet" href="css/admin-style.css">
+</head>
+
+<body>
+  <input type="checkbox" id="check" checked>
+  <!--header area start-->
+  <header>
+    <label for="check">
+      <i class="fas fa-bars" id="sidebar_btn"></i>
+    </label>
+    <div class="left_area">
+      <h3>Tech <span>Shop</span></h3>
+    </div>
+    <div class="right_area">
+      <a href="#" class="logout_btn">Logout <i class="fas fa-sign-out-alt"></i></a>
+    </div>
+  </header>
+  <!--header area end-->
+
+  <!--sidebar start-->
+  <div class="sidebar">
+    <div class="profile_info">
+      <img src="images/admin/admin.png" class="profile_image" alt="">
+      <h4>HAMEM</h4>
+    </div>
+    <a href="admin-dashboard.html"><i c class="fas fa-home"></i><span>Home</span></a>
+    <a href="admin-messages.html"><i class="fas fa-comment"></i></i><span>Messages</span></a>
+    <a href="admin-notifications.html"><i class="fas fa-bell"></i></i><span>Notifications</span></a>
+    <a href="javascript:" id="category-list-container"><i class="fas fa-layer-group"></i><span>Category<i
+          class="fas fa-angle-right"></i></span>
+      <ul id="category-list" class="hide">
+        <li><a href="admin-add-category.html"><i class="fas fa-plus-square"></i>Add</a></li>
+        <li><a href="admin-delete-category.html"><i class="fas fa-trash-alt"></i>Delete</a></li>
+        <li><a href="admin-edit-category.html"><i class="fas fa-edit"></i> Edit</a></li>
+      </ul>
+    </a>
+    <a href="javascript:" id="product-list-container"><i class="fas fa-shopping-cart"></i></i><span>Product<i
+          class="fas fa-angle-right"></i></span>
+      <ul id="product-list" class="hide">
+        <li><a href="admin-add-product.html"><i class="fas fa-plus-square"></i>Add</a></li>
+        <li><a href="admin-delete-product.html"><i class="fas fa-trash-alt"></i>Delete</a></li>
+        <li><a href="admin-edit-product.html"><i class="fas fa-edit"></i> Edit</a></li>
+      </ul>
+    </a>
+    <a href="admin-reset-password.html"><i class="fas fa-lock"></i><span>Password</span></a>
+
+  </div>
+  <!--sidebar end-->
+
+  <!--content start-->
+  <div class="admin-content">
+    <div>
+      <!-- Content-->
+      <h2>Delete Category</h2>
+      <div id="categories-container">
+
+      </div>
+    </div>
+    <footer>
+      Copyright &copy; 2020, Tech Shop All rights reserved.
+    </footer>
+  </div>
+  <!--content end-->
+  <script type="module" src="js/admin.js"></script>
+</body>
+
+</html>
