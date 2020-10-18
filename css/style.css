@@ -65,7 +65,7 @@ main {
     transition: transform 400ms ease-out, opacity 0.5s ease-out;
 }
 
-.card__button {
+.card__button-container .card__button {
     background-color: var(--primary-button-color);
     border: 0;
     border-radius: 5px;
@@ -75,7 +75,7 @@ main {
     text-decoration: none;
 }
 
-.card__button:hover {
+.card__button-container .card__button:hover {
     background-color: var(--hover-primary-button-color);
 }
 
@@ -83,9 +83,14 @@ main {
     background-color: rgba(0, 0, 0, 0.15);
     flex: 0 0 15%;
     text-align: center;
-    font-size: 1.5em;
+    font-size: 1.15em;
     padding: .5em;
     font-family: sans-serif;
     font-weight: lighter;
 }
 /* End of card style */
+h1 {
+    color: var(--primary-text-color);
+    text-align: center;
+    font-size: 50px;
+}
