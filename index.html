@@ -18,7 +18,7 @@
     <header>
         <nav class="navbarWrapper">
             <div id = "nav" >
-                <a id="logo" class="nav__item" href="#">
+                <a id="logo" class="nav__item" href="index.html">
                     <i id="nav-logo" class="fa fa-mobile" ></i>
                     <span id="tech-word">Tech</span><span style = "color: teal;">SHOP </span>
                 </a>
@@ -31,9 +31,14 @@
                 </div>
 
                 <div id="signup-container" class="nav__item">
-                    <a id="user-login" href = "#" >
+                    <a id="user-login" href = "#">
                         <i id="user-login-icon" class="fa fa-user"></i>
-                        <span>Sign up</span>
+                        <span>Log in</span>
+                        <i class="fa fa-caret-down"></i>
+                        <div class="dropdown-content">
+                            <a id="logIn" href="#">Log in</a>
+                            <a id="signUp" href="#">Sign up</a>
+                        </div>
                     </a>
                 </div>
 
@@ -45,28 +50,34 @@
                 </div>
             </div>
 
-            <div id = "nav-menu">
-                <ul>
-                    <li>
-                        <a href = "#">Home</a>
-                    </li>
-                    <li>
-                        <a href = "#">About</a>
-                    </li>
-                    <li>
-                        <a href = "#footer">Contact</a>
-                    </li>
-                    <li>
-                        <a href = "#">Categories</a>
+            <div id="nav-menu">
+                <ul id="menu">
+                    <li class="menu-item"><a class="menu-link" href = "#">Home</a></li>
+                    <li class="menu-item"><a class="menu-link" href = "#">About</a></li>
+                    <li class="menu-item"><a class="menu-link" href = "#footer">Contact</a></li>
+                    <li class="menu-item" id="menu-categories">
+                        <a class="menu-link" href = "#">Categories
+                            <i class="fa fa-caret-down"></i>
+                            <div class="category-dropdown">
+                                <a id="camera" href="camera.html">Camera</a>
+                                <a id="iphone" href="Iphone.html">Iphone</a>
+                                <a id="labtop" href="labtob.html">Labtop</a>
+                                <a id="monitor" href="monitor.html">Monitor</a>
+                                <a id="phone" href="phone.html">Phone</a>
+                                <a id="powerbank" href="Powerbank.html">Powerbank</a>
+                                <a id="printer" href="printer.html">Printer</a>
+                                <a id="tablet" href="Tablet.html">Pablet</a>
+                                <a id="storage" href="storage.html">Storage</a>
+                                <a id="tv" href="tv.html">Tv</a>
+                                <a id="back-bag" href="back-bag.html">Back-Gag</a>
+                            </div>
+                        </a>
                     </li>
                 </ul>
             </div>
         </nav>
     </header>
     
-    
-
-
     <main>
         <div class="card">
             <div class="card__img-container">

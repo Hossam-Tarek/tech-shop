@@ -99,4 +99,5 @@ modules.xml
 !.vscode/extensions.json
 *.code-workspace
 
+debug.log
 # End of https://www.toptal.com/developers/gitignore/api/phpstorm+all,vscode
