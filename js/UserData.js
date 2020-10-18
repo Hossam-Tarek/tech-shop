@@ -10,7 +10,7 @@ export default class UserData {
 
     constructor(name, email, password) {
         this.setName(name);
-        this.#setEmail(email);
+        this.setEmail(email);
         this.#setPassword(password);
         this.#image = "images/user/default.png";
     }
@@ -27,7 +27,7 @@ export default class UserData {
         return this.#email;
     }
 
-    #setEmail(email) {
+    setEmail(email) {
         const regex =
             /^[a-zA-Z0-9.+-=*/~!#$%^&{}|'`_?]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z-]+)+$/;
 
@@ -58,7 +58,7 @@ export default class UserData {
     setPhoneNumber(phoneNumber) {
         const regex = /^\d{11}$/;
 
-        if (regex.test(phoneNumber)) {
+        if (!regex.test(phoneNumber)) {
             throw new InvalidPhoneNumber();
         } else {
             this.#phoneNumber = phoneNumber;
@@ -96,6 +96,11 @@ export default class UserData {
 
     setImage(image) {
         this.#image = image;
+    }
+
+    // Returns another object with the same data
+    static getCopy(object) {
+        return UserData.setObject(object.getObject());
     }
 
     // Returns the object representation of the UserData class to use it in json

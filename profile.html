@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Profile</title>
+
+    <link rel="stylesheet" href="css/fontaswesme-all.min.css">
+    <link rel="stylesheet" href="css/profile.css">
+</head>
+<body>
+    <main>
+        <div id="img-container">
+            <img src="images/user/default.png" id="profile-img"
+                 alt="user profile picture">
+        </div>
+
+        <form id="form">
+            <div class="form__row">
+                <label class="form__label" for="name">Name</label>
+                <input class="form__input" type="text" id="name" disabled>
+                <div class="form__validation" id="name-validation">
+                    Name can not be empty.
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="form__row">
+                <label class="form__label" for="email">Email</label>
+                <input class="form__input" type="email" id="email" disabled>
+                <div class="form__validation" id="email-validation">
+                    Invalid email address.
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="form__row">
+                <label class="form__label" for="password">Password</label>
+                <input class="form__input" type="password" id="password"
+                       placeholder="old password" disabled>
+                <input class="form__input" type="password" id="new-password"
+                       placeholder="new password" disabled>
+                <div class="form__validation" id="password-validation">
+                    Invalid password, password must be 8 characters or more.
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="form__row">
+                <label class="form__label" for="phone-number">Phone number</label>
+                <input class="form__input" type="text" id="phone-number" disabled>
+                <div class="form__validation" id="phone-number-validation">
+                    Invalid phone number, phone number must be 11 digits.
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="form__row">
+                <label class="form__label" for="address">Address</label>
+                <input class="form__input" type="text" id="address" disabled>
+                <div class="form__validation" id="address-validation">
+                    Address can not be empty.
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="form__row">
+                <label class="form__label" for="birthday">Birthday</label>
+                <input class="form__input" type="date" id="birthday" disabled>
+                <div class="form__validation" id="birthday-validation">
+                    Birthday can not pass the current day.
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="form__row">
+                <label class="form__label" for="gender">Gender</label>
+                <select id="gender" disabled>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+            </div>
+
+            <div class="form__button-container">
+                <input type="button" id="form__save-button" value="Save"
+                       class="form__button">
+                <input type="button" id="form__edit-button" value="Edit profile"
+                       class="form__button">
+                <input type="button" id="form__cancel-button" value="Cancel"
+                       class="form__button">
+            </div>
+        </form>
+    </main>
+
+    <script type="module" src="js/profile.js"></script>
+</body>
+</html>
