@@ -155,10 +155,6 @@ header .navbarWrapper{
     background-color: var(--hover-primary-button-color);
 }
 
-#logIn:hover #signup-container{
-border-bottom: 1px solid red !important;
-}
-
 .category-dropdown a{
     float: none;
     padding: 5px 10px;
