@@ -99,7 +99,7 @@ function saveChanges() {
 
     if (password.value !== "") {
         try {
-            tempUser.changePassword(newPassword);
+            tempUser.changePassword(password.value, newPassword);
         } catch (error) {
             passwordError.textContent = error.message;
             passwordError.style.display = "block";

@@ -106,6 +106,7 @@ header .navbarWrapper{
 #chart-login{
     display: inline-block;
 }
+/* End of card style */
 
 #user-login,
 #chart-login {
@@ -509,3 +510,4 @@ footer{
         font-weight: lighter;
     }
     /* End of card style */
+
