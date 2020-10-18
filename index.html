@@ -17,55 +17,48 @@
     
     <header>
         <nav class="navbarWrapper">
-    
             <div id = "nav" >
-             <ul>
-                <li class = "logo"><i class = "fa fa-mobile" ></i> Tech<span style = "color: teal;">SHOP </span> </li>
-                <li>
-                    <form id = "form-search"  action ="" >
-                        <input  id = "search" type ="text" placeholder = "Search for ......... "> 
-                        <input  id = "submit" type = "submit" value = "Go">
+                <a id="logo" class="nav__item" href="#">
+                    <i id="nav-logo" class="fa fa-mobile" ></i>
+                    <span id="tech-word">Tech</span><span style = "color: teal;">SHOP </span>
+                </a>
+
+                <div id="search-submit" class="nav__item">
+                    <form id="form-search">
+                        <input  id="search" type ="text" placeholder="e.g. Iphone">
+                        <input  id="submit" type = "submit" value="Go">
                     </form>
-                </li>
-    
-                <li style = "float:right; margin-right: 100px;">
-                        <a   id ="chart-login" href = "#about">
-                            <span style = "margin-right: 5px;">
-                                <i class = "fa fa-shopping-cart"  style = "font-size:25px;" value = 0></i>
-                            </span>Shopping Cart
-                        </a>
-                </li>
-    
-                <li style = "float:right">
-                        <a id = "user-login" href = "#about" >
-                            <span style = "margin-right: 5px;">
-                                <i class = "fa fa-user"  style = "font-size:25px;"></i>
-                            </span>Sign in or Create Acount
-                        </a>
-                    </li>
-             </ul>
-    
+                </div>
+
+                <div id="signup-container" class="nav__item">
+                    <a id="user-login" href = "#" >
+                        <i id="user-login-icon" class="fa fa-user"></i>
+                        <span>Sign up</span>
+                    </a>
+                </div>
+
+                <div id="shopping-container" class="nav__item">
+                    <a id ="chart-login" href = "#">
+                        <i id="shopping-icon" class="fa fa-shopping-cart" value="0"></i>
+                        <span>Shopping Cart</span>
+                    </a>
+                </div>
             </div>
-    
-    
+
             <div id = "nav-menu">
                 <ul>
                     <li>
                         <a href = "#">Home</a>
                     </li>
-    
                     <li>
                         <a href = "#">About</a>
                     </li>
-    
                     <li>
                         <a href = "#footer">Contact</a>
                     </li>
-    
                     <li>
                         <a href = "#">Categories</a>
-                    </li>     
-            
+                    </li>
                 </ul>
             </div>
         </nav>

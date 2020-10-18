@@ -1,82 +1,139 @@
 @import "color-scheme.css";
 
 
-    *, *:before, *:after {
-        box-sizing: border-box;
-        margin: 0px;
-        padding: 0px;
-        text-decoration: none
-    }
+*, *:before, *:after {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none
+}
 
-    body {
-        background-color: var(--bg-color);  
-    }
+body {
+    background-color: var(--bg-color);
+}
 
-    /* start of  header */
-    header{
-        margin-bottom: 70px;
-    }
-    header .navbarWrapper{
-        width: 100%;
-        left: 0; 
-    }
-    
-    header #nav{
-        width: 100vw;
-        position: fixed;
-        top: 0px;
-        z-index: 4;
-        background-color: white;  
-    }
+/* start of  header */
+header{
+    margin-bottom: 70px;
+}
 
-    header #nav-menu{
-        position: relative;
-        top: 53px;
-    }
+header .navbarWrapper{
+    width: 100%;
+    left: 0;
+}
+    
+#nav{
+    width: 100vw;
+    position: fixed;
+    top: 0px;
+    z-index: 4;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+}
 
-    header .navbarWrapper #nav .fa-mobile{
-        width:44px;
-        height:44px;
-        text-align:center;
-        margin-top: 2px;
-    }
-    
-    header .navbarWrapper #nav  ul .logo{
-        font-size: 40px;
-    }
-    
-    header .navbarWrapper #nav-menu{
-        background-color: var(  --navbar-bg-color);
-    }
-    
-    header .navbarWrapper #nav-menu ul ,header .navbarWrapper  #nav ul{
-        list-style-type: none;
-        margin: 0;
-        padding-left: 100px;
-        overflow: hidden;
-    }
-    
-    header .navbarWrapper #nav-menu ul li , header .navbarWrapper #nav li {
-        float: left;
-    }
-    
-    header .navbarWrapper  #nav-menu ul li a  , header .navbarWrapper  #nav ul li a{
-        display: block;
-        text-align: center;
-        padding: 14px 16px;
-    }
+header #nav-menu{
+    position: relative;
+    top: 53px;
+}
+
+.nav__item {
+    display: inline-block;
+    padding-top: 15px;
+}
+
+#logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    width: 15%;
+}
+
+#search-submit {
+    width: 40%;
+    padding-top: 0;
+}
+
+#signup-container {
+    width: 10%;
+}
+
+#shopping-container {
+    width: 15%;
+}
+
+#tech-word {
+    color: #000;
+}
+
+#nav-logo {
+    width:20px;
+    height:44px;
+    margin-top: 2px;
+    color: #000;
+}
+
+#form-search{
+    padding-top: 10px;
+}
+
+#search{
+    background-color: var(--bg-color);
+    height: 35px;
+    padding: 10px;
+    width: 70%;
+    border-radius: 10px;
+    border:  1px  solid  var(--bg-color);
+}
+
+#submit{
+    width: 17%;
+    font-weight: 800;
+    background-color: var(--primary-button-color);
+    color: #fafafa;
+    cursor: pointer;
+    height: 35px;
+    border-radius: 10px;
+    border: 1px solid var(--primary-button-color);
+}
+
+#submit:hover,
+#submit:focus {
+    background-color: var(--hover-primary-button-color);
+}
+
+#chart-login{
+    display: inline-block;
+}
+
+#shopping-icon {
+
+}
+
+#user-login-icon {
+
+}
+
+header .navbarWrapper #nav-menu{
+    background-color: var(  --navbar-bg-color);
+}
+
+#user-login,
+#chart-login {
+    color: #000;
+    font-size: 1.2em;
+    margin: 5px;
+}
+
+
     header .navbarWrapper #nav ul li a{
         color: black;
     }
-    
+
     header .navbarWrapper #nav-menu ul li a {
         color: white;
     }
-    
-    header .navbarWrapper  #nav ul #user-login ,header .navbarWrapper  #nav ul #chart-login{                          
-        display: inline-block;
-    }
-    
+
+
     header .navbarWrapper li a:hover:not(.active) {
         background-color: var(--hover-primary-button-color);
     }
@@ -107,36 +164,6 @@
     
     header .navbarWrapper #nav .fa-shopping-cart{
         position: relative;
-    }
-    
-    header .navbarWrapper #nav ul li #form-search{
-        padding-top: 10px;
-        margin-left: 80px;
-    }
-    
-    header .navbarWrapper #nav ul li #form-search #search{
-        background-color: var(--bg-color);
-        height: 35px;
-        padding: 10px;
-        width: 350px;
-        border-radius: 10px;
-        border:  1px  solid  var(--bg-color);
-    }
-    
-    header .navbarWrapper #nav ul li #form-search #submit{
-        width: 80px;
-        font-weight: 800;
-        background-color: var(--primary-button-color);
-        color: #fafafa;
-        cursor: pointer;
-        height: 35px;
-        border-radius: 10px;
-        border: 1px solid var(--primary-button-color);
-    }
-    
-    header .navbarWrapper #nav ul li #form-search  #submit:hover,
-    header .navbarWrapper #nav ul li #form-search  #submit:focus {
-        background-color: var(--hover-primary-button-color);    
     }
     /* end of  header */
     
