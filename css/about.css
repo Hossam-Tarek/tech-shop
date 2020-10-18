@@ -1,0 +1,18 @@
+/* about page styling */
+#about{
+    background-image: url('../images/about/AboutPageBG.png');
+    background-repeat: no-repeat;
+    background-position:center ;
+    background-size: cover;
+    height: 100vh;
+}
+#about h1{
+    text-align: center;
+    padding-top: 7%; 
+
+}
+#about p{ 
+    font-size: 18px;
+    padding: 5% 27%;
+}
+/*End of about page styling */
