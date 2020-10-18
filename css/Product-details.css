@@ -9,13 +9,23 @@ body {
     margin:auto;
     padding: 3%;
 }
+
+#productDetails1 i{
+    width:100%
+}
+
 #productInfo{
   padding: 0.8% 8%;
 }
+
 #productImg{
     width: 50%;
     padding: 1%;
     margin-right: 5%;
+}
+
+.container img{
+    width:100%;
 }
 
 
