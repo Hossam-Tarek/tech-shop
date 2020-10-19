@@ -1,6 +1,6 @@
 import UserData from "./UserData.js";
 
-// 
+ 
 if( window.location.href.indexOf('/logIn.html') !== -1 && sessionStorage.getItem("UserData") !== null ){
     window.location.href ="./index.html";
 }
