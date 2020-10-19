@@ -7,35 +7,38 @@
 </head>
 <body>
  
-<h1>Log In </h1>
 
-<form >
-  <div class="imgcontainer">
-    <img src="logo.png" >
+<form id="login-form">
+  <div class="logo">
+    <h3>Tech<span>Shop</span></h3>
+    <h5>Log In</h5>
   </div>
 
   <div class="container">
     <label for="userEmail"><b>User Email</b></label>
-    <input id="email_enter" type="text" placeholder="Enter Email" name="userEmail" required>
-    <p id="check4"></p>
+    <input id="email_input" type="text" placeholder="Enter Email" name="userEmail" required>
+    <p id="validate_email"></p>
 
     <label for="psw"><b>Password</b></label>
-    <input id="password_enter" type="password" placeholder="Enter Password" name="psw" required>
-    <p id="check5"></p>
-
-    <button type="button" id="loginbtn" >Login</button>
+    <input id="password_input" type="password" placeholder="Enter Password" name="psw" required>
+    <p id="validate_password"></p>
+    
     <label>
       <input type="checkbox" checked="checked" name="remember"> Remember me
     </label>
-  </div>
-
-  <div class="container" >
-    <button  type="button" class="cancelbtn"><a href="index.html"> Cancel </a></button>
     <span class="psw">Forgot <a href="#" >password?</a></span>
+
+    <button type="button" id="loginbtn" >Login</button>
+    
+
   </div>
+  <div class="container" >
+    <span>Are you a new user?</span>
+    <button  type="button" class="cancelbtn"><a href="signUp.html"> Sign Up </a></button>
+  </div>
+  
 </form>
 
-<script src="js/signIn.js"></script>
-
+<script type="module" src="js/signIn.js"></script>
 </body>
 </html>
