@@ -1,4 +1,9 @@
 /* about page styling */
+
+a{
+    text-decoration: none;
+}
+
 #about{
     background-image: url('../images/about/AboutPageBG.png');
     background-repeat: no-repeat;
