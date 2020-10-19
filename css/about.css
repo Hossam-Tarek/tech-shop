@@ -1,5 +1,6 @@
-/* about page styling */
+@import "./color-scheme.css";
 
+/* about page styling */
 a{
     text-decoration: none;
 }
