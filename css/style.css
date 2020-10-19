@@ -507,15 +507,16 @@ main {
 .card__button:hover {
     background-color: var(--hover-primary-button-color);
 }
-
+div.container + h1 {
+    text-align: center;
+}
 .card__title {
     background-color: rgba(0, 0, 0, 0.15);
     flex: 0 0 15%;
     text-align: center;
-    font-size: 1.5em;
-    padding: .5em;
+    font-size: 1.15em;
+    padding-top: .5em;
     font-family: sans-serif;
     font-weight: lighter;
 }
 /* End of card style */
-
