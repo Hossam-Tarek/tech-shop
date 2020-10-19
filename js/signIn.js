@@ -1,8 +1,8 @@
 import UserData from "./UserData.js";
 
- 
-if( window.location.href.indexOf('/logIn.html') !== -1 && sessionStorage.getItem("UserData") !== null ){
-    window.location.href ="./index.html";
+// Redirect To home page if user is logged in
+if (window.location.href.indexOf('/logIn.html') !== -1 && sessionStorage.getItem("UserData") !== null) {
+    window.location.href = "./index.html";
 }
 
 let validate_email = document.getElementById("validate_email");
@@ -31,21 +31,29 @@ function validateLogin() {
 
         // get old user data
         let oldUsers = localStorage.getItem("UserData");
-        oldUsers = JSON.parse(oldUsers);
 
-        let LoggedUser = checkUserAccount(oldUsers, email_input.value, password_input.value);
-
-        if (LoggedUser) {
-            window.location.href = "./index.html"
-            
-            LoggedUser = JSON.stringify(LoggedUser);
-            sessionStorage.setItem("UserData", LoggedUser);
-            
-            document.querySelector('#login-form').reset();
-        } else {
-            validate_password.innerHTML = "incorrect email or password :(";
-            validate_password.style.color = "red";
+        // Check if no users in local storage
+        if (oldUsers === null) {
+            alert("This acccount isn't founded")
         }
+        else {
+            oldUsers = JSON.parse(oldUsers);
+
+            let LoggedUser = checkUserAccount(oldUsers, email_input.value, password_input.value);
+
+            if (LoggedUser) {
+                window.location.href = "./index.html"
+
+                LoggedUser = JSON.stringify(LoggedUser);
+                sessionStorage.setItem("UserData", LoggedUser);
+
+                document.querySelector('#login-form').reset();
+            } else {
+                validate_password.innerHTML = "incorrect email or password :(";
+                validate_password.style.color = "red";
+            }
+        }
+
     }
 }
 
