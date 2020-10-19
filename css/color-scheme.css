@@ -35,4 +35,7 @@
   --text-success: #28a745;
   --text-warning: #ffc107;
   --text-danger: #dc3545;
+
+  /* Font family for all pages */
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif !important;
 }

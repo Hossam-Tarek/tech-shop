@@ -1,42 +1,68 @@
-let check4 = document.getElementById("check4");
-let check5 = document.getElementById("check5");
+import UserData from "./UserData.js";
 
-let emailEnter = document.getElementById("email_enter");
-let passwordEnter = document.getElementById("password_enter");
-
-function validateForm2() {
-        
-         if (!validateEmail(emailEnter.value)) {
-            check4.innerHTML="Please Enter Valid Email.";
-            check4.style.color = "red";
-        } else {
-            check4.innerHTML="";
-        }
-    
-        if(passwordEnter.value.length < 8) {
-            check5.innerHTML="Password must be 8 chars at least.";
-            check5.style.color = "red";
-        } else {
-            check5.innerHTML="";
-         }
-    
-        if(check4.innerHTML==""&&check5.innerHTML=="")
-        {
-            alert("well done! Your account has been logedin successfully" ); 
-            emailEnter.value="";
-            passwordEnter.value="";
-    
-        }
+// Redirect To home page if user is logged in
+if (window.location.href.indexOf('/logIn.html') !== -1 && sessionStorage.getItem("UserData") !== null) {
+    window.location.href = "./index.html";
 }
 
-//Valid Email Function 
-function validateEmail(email) 
-{
-    let re = /\S+@\S+\.\S+/;
-    return re.test(email);
+let validate_email = document.getElementById("validate_email");
+let validate_password = document.getElementById("validate_password");
+
+let email_input = document.getElementById("email_input");
+let password_input = document.getElementById("password_input");
+
+function validateLogin() {
+    //Valid Email Function   
+    if (!/\S+@\S+\.\S+/.test(email_input.value)) {
+        validate_email.innerHTML = "Please Enter Valid Email.";
+        validate_email.style.color = "red";
+    } else {
+        validate_email.innerHTML = "";
+    }
+
+    if (password_input.value.length < 8) {
+        validate_password.innerHTML = "Password must be 8 chars at least.";
+        validate_password.style.color = "red";
+    } else {
+        validate_password.innerHTML = "";
+    }
+
+    if (validate_email.innerHTML == "" && validate_password.innerHTML == "") {
+
+        // get old user data
+        let oldUsers = localStorage.getItem("UserData");
+
+        // Check if no users in local storage
+        if (oldUsers === null) {
+            alert("This acccount isn't founded")
+        }
+        else {
+            oldUsers = JSON.parse(oldUsers);
+
+            let LoggedUser = checkUserAccount(oldUsers, email_input.value, password_input.value);
+
+            if (LoggedUser) {
+                window.location.href = "./index.html"
+
+                LoggedUser = JSON.stringify(LoggedUser);
+                sessionStorage.setItem("UserData", LoggedUser);
+
+                document.querySelector('#login-form').reset();
+            } else {
+                validate_password.innerHTML = "incorrect email or password :(";
+                validate_password.style.color = "red";
+            }
+        }
+
+    }
 }
 
-document.getElementById("loginbtn").addEventListener("click", function() {
-    validateForm2();
-  });
- 
+document.getElementById("loginbtn").addEventListener("click", validateLogin);
+
+function checkUserAccount(oldUsers, userEmail, userPassword) {
+    for (let index = 0; index < oldUsers.length; index++) {
+        if (oldUsers[index].email == userEmail && oldUsers[index].password == userPassword)
+            return oldUsers[index]
+    }
+    return false;
+}

@@ -1,5 +1,9 @@
+@import "./color-scheme.css";
+
 /* about page styling */
-@import "color-scheme.css";
+a {
+    text-decoration: none;
+}
 
 body {
     background-color: var(--bg-color);

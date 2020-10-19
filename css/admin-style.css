@@ -164,7 +164,9 @@ header{
   margin-bottom: 20px;
 }
 
-
+.fa-shopping-cart:after {
+    display: none;
+}
 
 .sidebar a{
   color: var(--secondary-text-color);

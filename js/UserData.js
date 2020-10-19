@@ -13,6 +13,10 @@ export default class UserData {
         this.setEmail(email);
         this.#setPassword(password);
         this.#image = "images/user/default.png";
+        this.#address = "";
+        this.#phoneNumber = "";
+        this.#birthday = "";
+        this.#gender = "";
     }
 
     getName() {
@@ -20,7 +24,11 @@ export default class UserData {
     }
 
     setName(name) {
+        if (typeof name === "undefined" || name === ""){
+            throw new InvalidName();
+        }
         this.#name = name;
+            
     }
 
     getEmail() {
@@ -127,6 +135,12 @@ export default class UserData {
         newObject.setImage(object["image"]);
 
         return newObject;
+    }
+}
+
+export class InvalidName extends Error {
+    constructor() {
+        super("Invalid name , name mustn't be empty.");
     }
 }
 
