@@ -1,8 +1,18 @@
 import UserData from "./UserData.js";
 
+<<<<<<< HEAD
 // 
 if (window.location.href.indexOf('/logIn.html') !== -1 && sessionStorage.getItem("UserData") !== null) {
     window.location.href = "./index.html";
+||||||| ef53dbc
+// 
+if( window.location.href.indexOf('/logIn.html') !== -1 && sessionStorage.getItem("UserData") !== null ){
+    window.location.href ="./index.html";
+=======
+ 
+if( window.location.href.indexOf('/logIn.html') !== -1 && sessionStorage.getItem("UserData") !== null ){
+    window.location.href ="./index.html";
+>>>>>>> bdc2461840a3f80ecb7e129c935bc0c0058b7ed3
 }
 
 let validate_email = document.getElementById("validate_email");
