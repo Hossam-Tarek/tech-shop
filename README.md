@@ -21,3 +21,5 @@ We encourage you to contribute to Tech Shop. Please check out the [CONTRIBUTING.
 
 Tech Shop is Copyright © 2020 Hossam Tarek. It is a free software and redistributed
 under the terms specified in the [LICENSE](./LICENSE.txt) file.
+
+End of the file.
