@@ -14,7 +14,7 @@ export default class UserData {
         this.#setPassword(password);
         this.#image = "images/user/default.png";
         this.#address = "";
-        this.#phoneNumber = "";
+        this.#phoneNumber = "01111111111";
         this.#birthday = "";
         this.#gender = "";
     }
