@@ -520,3 +520,9 @@ div.container + h1 {
     font-weight: lighter;
 }
 /* End of card style */
+
+/* Start about page */
+#about {
+    padding: 5% 10% 0;
+}
+/* End about page */
