@@ -31,7 +31,7 @@ class Notification {
         this.date = getCurrentFormatedDate();
     }
 }
-class Message {
+export default  class Message {
     constructor(id, mailFrom, message) {
         this.id = id;
         this.readStatus = false;
@@ -63,8 +63,12 @@ if (localStorage.getItem('adminAccount') === null) {
     localStorage.setItem('productID', 1);
     localStorage.setItem('notifications', '[]');
     localStorage.setItem('notificationID', 1);
-    localStorage.setItem('messages', '[]');
-    localStorage.setItem('messageID', 1);
+
+    if(localStorage.getItem('messages') === null) //Check if first time to set messages
+	{
+		localStorage.setItem('messages','[]');
+		localStorage.setItem('messageID', 1);
+	}
 
     adminAccount = adminAccountObject;
 }
