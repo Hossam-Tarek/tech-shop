@@ -1,12 +1,21 @@
 @import "color-scheme.css";
 
 
+:root {
+    font-size: 15px;
+}
+
 *, *:before, *:after {
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
     text-decoration: none;
-    
+}
+body{
+    line-height: 1;
+}
+::placeholder{
+    font-size: 13px;
 }
 
 a:hover{
@@ -26,8 +35,15 @@ header{
 header .navbarWrapper{
     width: 100%;
     left: 0;
+    font-size: .8rem;
+
 }
-    
+
+header .navbarWrapper a{
+    font-size: 1rem;
+
+}
+
 #nav{
     width: 100vw;
     position: fixed;
@@ -50,6 +66,7 @@ header .navbarWrapper{
     min-width: 200px;
     padding-top: 7px;
     margin-right: 5.4%;
+    margin-left: 1%;
 }
 
 #search-submit {
@@ -59,7 +76,7 @@ header .navbarWrapper{
 
 #signup-container {
     width: 10%;
-    padding-top: 15px;
+    padding-top: 20px;
     min-width: 100px;
     position: relative;
 }
@@ -67,6 +84,8 @@ header .navbarWrapper{
 #shopping-container {
     width: 15%;
     min-width: 200px;
+    padding-top: 20px;
+
 }
 
 #tech-word {
@@ -118,8 +137,7 @@ header .navbarWrapper{
 #chart-login {
     color: #000;
     font-size: 1.2em;
-    margin: 5px;
-    
+    /* margin: 5px; */
 }
 
 #user-login{
